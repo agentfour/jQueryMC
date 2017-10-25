@@ -37,25 +37,17 @@
 
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <i class="fa fa-warning"></i>
 
-                    <h3 class="box-title">Input</h3>
+                    <h3 class="box-title">What is jQueryMC?</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <form name="" action="?" method="post" id="exampleForm">
-                        <div class="form-group">
-                            <label>Textarea</label>
-                            <textarea id="input" class="form-control" rows="3" placeholder="Enter ..."></textarea>
-                        </div>
-                        <div class="box-footer">
-                            <button type="submit" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-info pull-right">Submit</button>
-                        </div>
-                    </form>
+                    <p>jQueryMC is a lightweight framework that is used for organising jQuery code into Models and Controllers of a web application's Front-End.</p>
+                    <p>Specifically, Model code is most commonly AJAX Queries connecting to an API and is separated as such. Controllers is typically code that handles the operations for a given page, that might leverage Models and interact with the View. In this case, the View is the static output of an HTML page (even if it comes from a Dynamic Backend Source)</p>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -63,15 +55,56 @@
         </div>
         <!-- /.col -->
 
-        <div class="col-md-6">
+
+
+        <div class="col-md-4">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <i class="fa fa-bullhorn"></i>
 
-                    <h3 class="box-title">Output</h3>
+                    <h3 class="box-title">Why jQueryMC?</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <p>jQuery is a fantastic tool for JavaScript developers, however there is no common or standardised structure in the "Way to do things" with it.</p>
+                    <p>There are other frameworks out there, specifically designed around the MVC (Model View Controller) design pattern. However, what if you don't want JavaScript to manage the view component of a site? There are a number of reasons you don't want JavaScript to wholly manage the View component of a site, such as:</p>
+                    <ul>
+                        <li>Search Engine Optimisation</li>
+                    </ul>
+
+                    <p>There are other benefits to using this framework too:</p>
+                    <ul>
+                        <li>Lightweight (&lt;3kb minified)</li>
+                        <li>Flexible: You can use any existing library or plugin</li>
+                        <li>Structured: Laid out in a typical MVC pattern, without the "V"</li>
+                    </ul>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+
+
+
+        <div class="col-md-4">
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-bullhorn"></i>
+
+                    <h3 class="box-title">How to use?</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body" id="output">
+                    <p>First you need to set up the application:</p>
+                    <ol>
+                        <li>Download the source: <code>git clone git@github.com:agentfour/jQueryMC.git</code></li>
+                        <li>Run NPM Install: <code>npm install</code></li>
+                    </ol>
+
+                    <p>A controller typically works with one or more views. So to tell the framework that you want a Controller to run within a specific view, on the HTML of the view, enter in the following code to trigger a controller to run:<br><code>&lt;meta id="jmc-ctrl" jmc-ctrl="index" /&gt;</code></p>
+
+                    <p>Breaking down this code, we are creating a naturally invisible element on the page (the META tag), and giving it an ID of <code>jmc-ctrl</code>. This tells the framework to look here for the name of the controller to run. Then to specify which controller to run, you have the code <code>jmc-ctrl="index"</code> which tells the framework to execute the <strong>index</strong> controller.</p>
                 </div>
                 <!-- /.box-body -->
             </div>

@@ -5,6 +5,7 @@ module.exports = function (grunt) {
                 files: {
                     'js/app.min.js': [
 						'resources/js/config.js',
+						'resources/js/lib/helpers/*.js',
 						'resources/js/lib/*.js',
 						'resources/js/models/*.js',
 						'resources/js/controllers/*.js',
